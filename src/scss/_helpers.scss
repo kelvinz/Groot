@@ -1,0 +1,73 @@
+/*
+	(╯°□°)╯︵ ┻━┻ ¯\_(ツ)_/¯
+	kelvinzhao.com
+*/
+
+/*  functions
+---------------------------------------------------------------------------------- */
+
+// strip( 16px ) = 16
+@function strip( $num ) {
+	@return $num / ( $num * 0 + 1 );
+}
+
+// em( 16px ) = 1em
+@function em( $pixels, $context: $em ) {
+	@return ( $pixels / $context ) * 1em;
+}
+
+// power( 2, 2 )
+@function power( $num, $power ) {
+	$x: 1;
+	@if $power > 0 {
+		@for $i from 1 through $power {
+			$x: $x * $num;
+		}
+	} @else if $power < 0 {
+		@for $i from 1 through $power {
+			$x: $x / $num;
+		}
+	}
+	@return $x;
+}
+
+/*  mixins
+---------------------------------------------------------------------------------- */
+
+// @include align( 50%, 20% )
+// 50 50 is default if you @include align()
+@mixin align( $x: 50%, $y: 50% ) {
+	top       : $y;
+	left      : $x;
+	position  : absolute;
+	transform : translate( -( $x ), -( $y ) );
+}
+
+// @include break( $phone, up )
+// $phone, $tablet, $desktop, $xlarge or em size, up or down
+@mixin break( $size, $dir ) {
+
+	@if $dir == 'up' {
+		$dir: min-width;
+	} @else if $dir == 'down' {
+		$dir: max-width;
+		$size: $size - em( 1px );  // -1px to avoid conflict with up
+	}
+
+	@media ( $dir: $size ) {
+		@content;
+	}
+}
+
+/*  extends
+---------------------------------------------------------------------------------- */
+
+// @extend %clearfix
+// % = placeholder class ,if not used, won't be in output css
+%clearfix {
+	&:after {
+		content : '';
+		display : table;
+		clear   : both;
+	}
+}

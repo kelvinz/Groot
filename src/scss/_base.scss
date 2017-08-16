@@ -1,0 +1,62 @@
+/*
+	(╯°□°)╯︵ ┻━┻ ¯\_(ツ)_/¯
+	kelvinzhao.com
+*/
+
+/*  base settings
+---------------------------------------------------------------------------------- */
+
+html,
+body {
+	width      : 100%; // make site fit width
+	height     : 100%; // make site fill screen // may cause scrollTop bug
+	max-width  : 100%; // do not allow x scrolling
+	overflow-x : hidden; // able to hide stuff out of screen
+	overflow-y : auto; // scrolling auto
+	font-size  : 100%; // ~16px
+}
+
+html {
+	box-sizing : border-box; // width & height to include paddings
+	-webkit-overflow-scrolling : touch; // smooth scrolling for iOS
+}
+
+*,
+*::before,
+*::after {
+	box-sizing     : inherit; // inherit border-box from above
+	text-rendering : optimizeLegibility; // make small text readable
+}
+
+body {
+	cursor      : auto; // reset cursor
+	margin      : 0; // tight fit as a default
+	padding     : 0; // ^^
+	position    : relative; // for child absolutes to align to
+	font-style  : normal; // reset font
+	font-weight : normal; // ^^
+}
+
+a:hover {
+	cursor : pointer; // links use pointers
+}
+
+img {
+	height    : auto; // for responsive images
+	max-width : 100%; // ^^
+
+	display        : inline-block; // inline but have width & height
+	vertical-align : middle; // line side by side images by middle
+
+	image-rendering        : auto; // better scaling images most browers
+	-ms-interpolation-mode : bicubic; // better scaling images IE
+}
+
+.map_canvas,
+.mqa-display {
+	img,
+	embed,
+	object {
+		max-width : none !important; // better google map embed
+	}
+}

@@ -1,0 +1,72 @@
+/*
+	(╯°□°)╯︵ ┻━┻ ¯\_(ツ)_/¯
+	kelvinzhao.com
+*/
+
+/*  mother of all bases
+---------------------------------------------------------------------------------- */
+$em    : 16px;
+$ratio : 1.618; // golden ratio
+
+/*  device sizes
+---------------------------------------------------------------------------------- */
+$phone   : 36em; // ~576px
+$tablet  : 48em; // ~768px
+$desktop : 62em; // ~992px
+$xlarge  : 75em; // ~1200px
+
+/*  colors
+---------------------------------------------------------------------------------- */
+$pri-color   : #57599f;
+$sec-color   : #7bc6dc;
+
+$text-color  : #333333;
+$link-color  : #e7d72d;
+$succ-color  : #baed91;
+$warn-color  : #f8b88b;
+$alert-color : #fea3aa;
+
+/*  typography
+---------------------------------------------------------------------------------- */
+$pri-font  : 'Varela Round';
+$pri-link  : 'Varela+Round';
+$pri-sizes : '';
+
+$sec-font  : 'Montserrat';
+$sec-link  : $sec-font;
+$sec-sizes : ':300, 400, 700';
+
+@import url( 'https://fonts.googleapis.com/css?family=#{$pri-link}#{$pri-sizes}|#{$sec-link}#{$sec-sizes}' );
+
+h1 { font-size : #{ power( $ratio, 4 ) }em; }
+h2 { font-size : #{ power( $ratio, 3 ) }em; }
+h3 { font-size : #{ power( $ratio, 2 ) }em; }
+h4 { font-size : #{ power( $ratio, 1 ) }em; }
+h5 { font-size : 1em; }
+h6 { font-size : #{ power( $ratio, 1 ) - 1 }em; }
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;
+	color: $text-color;
+	font-weight: normal; // safari auto bolds h, can cause bugs if custom font has weights in them
+	font-family: $pri-font, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html {
+	font-size: $em;
+	line-height: 1.5;
+	color: $text-color;
+	font-family: $sec-font, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	transition: all ease 0.5s;
+	border-bottom: 2px solid $link-color;
+
+	&:hover {
+		color: darken( $link-color, 10% );
+		border-bottom: 2px solid darken( $link-color, 10% );
+	}
+}
