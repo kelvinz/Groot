@@ -33,10 +33,13 @@
   ],
   "private": true,
   "dependencies": {
-    "jquery": "^3.2.1",
-    "normalize-css": "^7.0.0"
   },
   "resolutions": {
     "normalize-css": "^7.0.0"
+  },
+  "devDependencies": {
+    "jquery": "^3.2.1",
+    "normalize-css": "^7.0.0",
+    "gsap": "^1.20.3"
   }
 }
