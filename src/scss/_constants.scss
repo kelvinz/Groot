@@ -3,6 +3,21 @@
 
 @import url( 'https://fonts.googleapis.com/css?family=#{$pri-link}#{$pri-sizes}|#{$sec-link}#{$sec-sizes}' );
 
+// manually load in font for better google speed results
+// @font-face {
+// 	font-family: $pri-font;
+// 	font-style: normal;
+// 	font-weight: 400;
+// 	font-display: swap; // use system fonts first, swap when custom loads
+// 	src: url('~@/assets/fonts/nunito-v10-latin-700.eot'); /* IE9 Compat Modes */
+// 	src: local('Nunito Bold'), local('Nunito-Bold'),
+// 		url('~@/assets/fonts/nunito-v10-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+// 		url('~@/assets/fonts/nunito-v10-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+// 		url('~@/assets/fonts/nunito-v10-latin-700.woff') format('woff'), /* Modern Browsers */
+// 		url('~@/assets/fonts/nunito-v10-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+// 		url('~@/assets/fonts/nunito-v10-latin-700.svg#Nunito') format('svg'); /* Legacy iOS */
+// }
+
 h1 { font-size : #{ power( $ratio, 4 ) }em; }
 h2 { font-size : #{ power( $ratio, 3 ) }em; }
 h3 { font-size : #{ power( $ratio, 2 ) }em; }
