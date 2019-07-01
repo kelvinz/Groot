@@ -34,15 +34,50 @@ body {
 	font-weight : normal; // ^^
 }
 
-a:hover {
-	cursor : pointer; // links use pointers
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+hr,
+pre,
+figure,
+blockquote {
+	margin: 0; // remove all margins & paddings
+	padding; 0; // ^^
 }
 
-img {
-	height    : auto; // for responsive images
+ol,
+ul {
+	list-style: none; // remove default list bullets
+}
+
+input,
+select,
+button,
+textarea {
+	font: inherit; // inherit bases
+	color: inherit; // ^^
+	letter-spacing: inherit; // ^^
+}
+
+img,
+svg,
+embed,
+video,
+audio,
+canvas,
+iframe,
+object {
+	height    : auto; // responsive
 	max-width : 100%; // ^^
 
-	display        : inline-block; // inline but have width & height
+	display        : block; // inline block has whitespace at bottom
 	vertical-align : middle; // line side by side images by middle
 
 	image-rendering        : auto; // better scaling images most browers
@@ -56,4 +91,13 @@ img {
 	object {
 		max-width : none !important; // better google map embed
 	}
+}
+
+table {
+	width: 100%; // default table style
+	table-layout: fixed; // ^^
+}
+
+a:hover {
+	cursor : pointer; // links use pointers
 }
