@@ -4,7 +4,8 @@
 */
 
 // dependencies
-@import '../lib/normalize-css/normalize';
+@import '../../node_modules/normalize.css/normalize';
+// @import '~normalize.css';
 
 // app structure
 @import 'base';

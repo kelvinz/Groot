@@ -54,11 +54,18 @@
 	}
 }
 
+// @include hover( $phone, up )
+@mixin hover() {
+	@media ( hover: hover ) {
+		@content;
+	}
+}
+
 /*  extends
 ---------------------------------------------------------------------------------- */
 
 // @extend %clearfix
-// % = placeholder class ,if not used, won't be in output css
+// % = placeholder class, if not used, won't be in output css
 %clearfix {
 	&:after {
 		content : '';

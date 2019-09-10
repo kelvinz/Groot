@@ -1,0 +1,13 @@
+{
+  "name": "groot",
+  "version": "4.0.0",
+  "description": "A designer's endless *cough ocd* pursuit of a base/basic html boilerplate.",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "repository": {},
+  "dependencies": {
+    "gsap": "^2.1.3",
+    "normalize.css": "^8.0.1"
+  }
+}
