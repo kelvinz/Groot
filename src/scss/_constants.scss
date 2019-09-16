@@ -1,31 +1,20 @@
-/*  foundation
+/*  constants
 ---------------------------------------------------------------------------------- */
 
 $pri-font  : 'Varela Round';
 $pri-link  : 'Varela+Round';
 $pri-sizes : '';
 
-$sec-font  : 'Montserrat';
-$sec-link  : $sec-font;
-$sec-sizes : ':300,400,700';
+// $sec-font  : 'Montserrat';
+// $sec-link  : $sec-font;
+// $sec-sizes : ':300,400,700';
 
-@import url( 'https://fonts.googleapis.com/css?family=#{$pri-link}#{$pri-sizes}|#{$sec-link}#{$sec-sizes}' );
-
-// manually load in font for better google speed results
-
-// @font-face {
-// 	font-family: $pri-font;
-// 	font-style: normal;
-// 	font-weight: 400;
-// 	font-display: swap; // use system fonts first, swap when custom loads
-// 	src: url('~@/assets/fonts/nunito-v10-latin-700.eot'); /* IE9 Compat Modes */
-// 	src: local('Nunito Bold'), local('Nunito-Bold'),
-// 		url('~@/assets/fonts/nunito-v10-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-// 		url('~@/assets/fonts/nunito-v10-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-// 		url('~@/assets/fonts/nunito-v10-latin-700.woff') format('woff'), /* Modern Browsers */
-// 		url('~@/assets/fonts/nunito-v10-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-// 		url('~@/assets/fonts/nunito-v10-latin-700.svg#Nunito') format('svg'); /* Legacy iOS */
-// }
+@font-face {
+	font-family: $pri-font;
+	font-display: swap; // use system fonts first, swap when custom loads
+	src: local('Varela Round'), local( 'VarelaRound-Regular' ),
+		url( '../fonts/VarelaRound-Regular.ttf' ) format( 'truetype' )
+}
 
 // @font-face {
 // 	font-family: $sec-font;
@@ -59,7 +48,7 @@ html {
 	font-size: $t-md;
 	line-height: 1.5;
 	color: $color-text;
-	font-family: $sec-font, $font-sans;
+	font-family: $pri-font, $font-sans;
 }
 
 body {
@@ -69,18 +58,19 @@ body {
 }
 
 a {
-	color: $color-link;
-	text-decoration: none;
-	transition: all ease .3s;
-	border-bottom: 1px solid $color-link;
+	display: inline;
+	transition: all ease .25s;
+	background-size: 100% 0px;
+	text-decoration: underline;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	color: lighten( $color-link, 7% );
+	background-image: linear-gradient( 90deg, lighten( $color-link, 0% ) 100%, transparent 100% );
+	text-shadow: 1px 1px $color-white, -1px 1px $color-white, -1px -1px $color-white, 1px -1px $color-white;
 
 	@include hover() {
 		&:hover {
-			color: darken( $color-link, 10% );
-			border-bottom: 1px solid darken( $color-link, $d-xs );
+			color: lighten( $color-link, 21% );
 		}
 	}
 }
-
-/*  constants
----------------------------------------------------------------------------------- */

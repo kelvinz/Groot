@@ -8,8 +8,6 @@
 /*	app.js starts here
 	---------------------------------------------------------------------------------- */
 
-$( function() {
+document.addEventListener( 'DOMContentLoaded', function( e ) {
 
-	"use strict";
-
-});
+} )

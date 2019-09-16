@@ -11,7 +11,11 @@
 @import 'base';
 @import 'helpers';
 @import 'configs';
-@import 'constants';
+
+// @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 // pages
-@import 'index'
+@import 'constants';
+@import 'index';

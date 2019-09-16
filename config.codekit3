@@ -5,6 +5,14 @@
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
 		"uuidString": "3EB063E5-6D53-41BC-AEE2-3A487BE53282"
+		},
+	{
+		"name": "Postcss",
+		"scriptSourceString": "npm run build",
+		"scriptType": 1,
+		"scriptUUIDString": "14F557EE-16F1-4FA4-8603-FDE5D1EB38E3",
+		"stepType": 2,
+		"uuidString": "0A1824F8-012F-4471-9546-754024C23172"
 		}
 	],
 "creatorBuild": "31491",
@@ -59,17 +67,6 @@
 		"sC": 0,
 		"tS": 1
 		},
-	"/node_modules/gsap/ScrollToPlugin.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/dist/node_modules/gsap/ScrollToPlugin.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 1
-		},
 	"/node_modules/gsap/TweenLite.js": {
 		"bF": 0,
 		"ft": 64,
@@ -97,6 +94,17 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/postcss.config.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/dist/postcss.config.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 1
+		},
 	"/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -116,6 +124,22 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/src/404.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 1,
+		"oA": 0,
+		"oAP": "/dist/404.html",
+		"oF": 0
+		},
+	"/src/fonts/VarelaRound-Regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/dist/fonts/VarelaRound-Regular.ttf",
+		"oF": 1
+		},
 	"/src/img/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
@@ -131,14 +155,14 @@
 		"oAP": "/dist/img/icon.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
 	"/src/index.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
+		"hM": 1,
 		"oA": 0,
 		"oAP": "/dist/index.html",
 		"oF": 0
@@ -180,9 +204,9 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "/dist/robots.txt",
-		"oF": 0
+		"oF": 1
 		},
 	"/src/scss/_base.scss": {
 		"aP": 1,
@@ -266,12 +290,32 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "/dist/sitemap.xml",
-		"oF": 0
+		"oF": 1
+		},
+	"/tailwind.config.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/dist/tailwind.config.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 1
 		}
 	},
 "hooks": [
+	{
+		"enabled": 1,
+		"name": "Tailwind",
+		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGYmNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QFgcIDxQcJicqMTU6Oz5CRktMT1VZXV9VJG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFByZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0ZXNWJGNsYXNzEAKAAoAV0hALERNaTlMub2JqZWN0c6ESgAOAFNQLFRYXGBkaG18QEU5TUmlnaHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVzc2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KAE4AOgASAEdUdHh8gCyEiIyQlWU5TT3BlcmFuZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVzc2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOACIANXHZhbHVlRm9yS2V5OtIfCygpEAGAB9IrLC0uWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU1NlbGZFeHByZXNzaW9uoy0vMFxOU0V4cHJlc3Npb25YTlNPYmplY3TSEAsyNKEzgAmADNMLHzY3ODlZTlNLZXlQYXRogAsQCoAKXWlucHV0RnVsbFBhdGjSKyw8PV8QHE5TS2V5UGF0aFNwZWNpZmllckV4cHJlc3Npb26jPC8w0issP0BeTlNNdXRhYmxlQXJyYXmjP0EwV05TQXJyYXnSKyxDRF8QE05TS2V5UGF0aEV4cHJlc3Npb26kQ0UvMF8QFE5TRnVuY3Rpb25FeHByZXNzaW9u00cfC0hJSl8QD05TQ29uc3RhbnRWYWx1ZYAPEACAEFVHcm9vdNIrLE1OXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNNLzDUC1BRUlNJI1RaTlNNb2RpZmllcldOU0ZsYWdzXk5TT3BlcmF0b3JUeXBlgBIQY9IrLFZXXxAVTlNJblByZWRpY2F0ZU9wZXJhdG9yo1ZYMF8QE05TUHJlZGljYXRlT3BlcmF0b3LSKyxaW18QFU5TQ29tcGFyaXNvblByZWRpY2F0ZaNaXDBbTlNQcmVkaWNhdGXSKyxBXqJBMNIrLGBhXxATTlNDb21wb3VuZFByZWRpY2F0ZaNgXDBfEA9OU0tleWVkQXJjaGl2ZXLRZGVUcm9vdIABAAgAEQAaACMALQAyADcAUABWAF0AdwCJAJAAkgCUAJYAmwCmAKgAqgCsALUAyQDcAPIA9AD2APgA+gEFAQ8BHgExAT0BPwFBAUMBRQFHAVQBWQFbAV0BYgFtAXYBiQGNAZoBowGoAaoBrAGuAbUBvwHBAcMBxQHTAdgB9wH7AgACDwITAhsCIAI2AjsCUgJZAmsCbQJvAnECdwJ8ApgCnAKlArACuALHAskCywLQAugC7AMCAwcDHwMjAy8DNAM3AzwDUgNWA2gDawNwAAAAAAAAAgEAAAAAAAAAZgAAAAAAAAAAAAAAAAAAA3I=",
+		"runOrder": 0,
+		"scriptSourceString": "npx tailwind build dist/css/app.css -o dist/css/app.css -c tailwind.config.js",
+		"scriptType": 1,
+		"uuidString": "80427C52-B892-45EE-8E6F-E2022D2756C8"
+		}
 	],
 "manualImportLinks": {
 	},
@@ -281,7 +325,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets-verd",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 589795491.84257901
+	"lastBuiltDate": 590314224.38732505
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2337,7 +2381,7 @@
 	"npmCreatePackageLock": 1,
 	"npmInstallOptionalDependencies": 0,
 	"npmSaveExactVersion": 0,
-	"npmTargetDependencyListType": 1,
+	"npmTargetDependencyListType": 2,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules",
