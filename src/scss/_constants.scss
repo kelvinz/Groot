@@ -45,16 +45,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html {
-	font-size: $t-md;
+	font-size: $t-sm;
 	line-height: 1.5;
 	color: $color-text;
 	font-family: $pri-font, $font-sans;
 }
 
 body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
 }
 
 a {

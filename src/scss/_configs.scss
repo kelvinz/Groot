@@ -47,6 +47,7 @@ $scale-major-second: 1.125;
 
 $scale: $scale-golden-ratio;
 
+$t-ss: #{ 2 - power( $scale, 1 ) }rem;
 $t-xs: #{ power( $scale, 1 ) - 1 }rem;
 $t-sm: #{ 1 }rem;
 $t-md: #{ power( $scale, 1 ) }rem;
