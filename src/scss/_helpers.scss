@@ -54,7 +54,7 @@
 	}
 }
 
-// @include hover( $phone, up )
+// @include hover()
 @mixin hover() {
 	@media ( hover: hover ) {
 		@content;

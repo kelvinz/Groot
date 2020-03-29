@@ -12,6 +12,7 @@ body {
 }
 
 html {
+	text-size-adjust: 100%; // disable auto-enlargement of small text in safari
 	box-sizing : border-box; // width & height to include paddings
 	-webkit-overflow-scrolling : touch; // smooth scrolling for iOS
 	-webkit-font-smoothing: antialiased; // better font rendering

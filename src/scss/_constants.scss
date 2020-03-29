@@ -68,8 +68,8 @@ a {
 	background-image: linear-gradient( 90deg, lighten( $color-link, 0% ) 100%, transparent 100% );
 	text-shadow: 1px 1px $color-white, -1px 1px $color-white, -1px -1px $color-white, 1px -1px $color-white;
 
-	@include hover() {
-		&:hover {
+	&:hover {
+		@include hover() {
 			color: lighten( $color-link, 21% );
 		}
 	}
